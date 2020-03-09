@@ -23,10 +23,14 @@ struct ContentView: View {
             .font(.largeTitle)
             .fontWeight(.bold)
             .multilineTextAlignment(.leading)
-            .padding(.bottom, 100)
+        Text("Capra falconeri")
+            .font(.subheadline)
+            .fontWeight(.light)
+            .multilineTextAlignment(.leading)
+        .padding(.bottom, 100)
             
             
-                Text("Capacity:")
+                Text("Kingdom:")
                     .bold()
                 
                 Text("City:")

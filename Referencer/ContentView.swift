@@ -11,16 +11,19 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
        
-        VStack() {
-            Image("gabba")
+       VStack() {
+            Image("markhor")
             .resizable()
-            .scaledToFit()
-            .frame(width: 400.0,height:400)
+                .frame(width: 420.0,height:300)
+                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 
                 
-            Text("The Gabba Stadium")
-                .font(.largeTitle)
-                .bold()
+                
+        Text("Markhoor")
+            .font(.largeTitle)
+            .fontWeight(.bold)
+            .multilineTextAlignment(.leading)
+            .padding(.bottom, 100)
             
             
                 Text("Capacity:")
@@ -30,13 +33,6 @@ struct ContentView: View {
                     .bold()
                 Text("Sport:")
                     .bold()
-            
-            
-            
-            
-            
-            
-                
             
         }
         

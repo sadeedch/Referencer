@@ -12,52 +12,43 @@ struct ContentView: View {
     var body: some View {
        
         
-        // for the image
+       
         VStack() {
-            VStack(){
+           
+             // for the image
             Image("markhor")
                 .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
-            }
             
-                
         // for title and sub heading
             VStack {
-                
                 Text("Markhor")
-                .font(.largeTitle)
+                    .font(.largeTitle)
                     .fontWeight(.bold)
-                    //.multilineTextAlignment(.leading)
+               
                 
                 Text("Capra falconeri")
                     .font(.subheadline)
                     .fontWeight(.light)
-                    //.multilineTextAlignment(.leading)
                     .padding(.bottom ,30)
-            }
+                }.frame(width: 370, alignment: .leading)
                 
             VStack(){
-                HStack(){
-                        Text("Kingdom:")
-                            .fontWeight(.heavy)
-                        Text("Animalia")
+                HStack {
+                    Text("Kingdom:")
+                        .fontWeight(.heavy)
+                    Text("Animalia")
                     }
-                    HStack {
-                        Text("Location:")
-                            .fontWeight(.heavy)
-                        Text("Pakistan")
+                HStack {
+                    Text("Location:")
+                        .fontWeight(.heavy)
+                    Text("Pakistan")
                     }
-                    
-                    HStack {
-                        Text("Other Name:")
-                            .fontWeight(.heavy)
-                        Text("Snake Eater")
+                HStack {
+                    Text("Other Name:")
+                        .fontWeight(.heavy)
+                    Text("Snake Eater")
                     }
-                    
-                    
                 }
-            
-            
-            
         }
         
     }

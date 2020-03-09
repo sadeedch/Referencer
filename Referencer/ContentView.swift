@@ -21,37 +21,44 @@ struct ContentView: View {
             
                 
         // for title and sub heading
-            VStack(alignment: .leading) {
+            VStack {
                 
                 Text("Markhor")
                 .font(.largeTitle)
-                .fontWeight(.bold)
-                    .multilineTextAlignment(.leading)
+                    .fontWeight(.bold)
+                    //.multilineTextAlignment(.leading)
                 
                 Text("Capra falconeri")
                     .font(.subheadline)
                     .fontWeight(.light)
-                    .multilineTextAlignment(.leading)
+                    //.multilineTextAlignment(.leading)
                     .padding(.bottom ,30)
             }
                 
-                VStack(){
-                    Text("Kingdom:")
-                        .bold()
-                    Text("")
+            VStack(){
+                HStack(){
+                        Text("Kingdom:")
+                            .fontWeight(.heavy)
+                        Text("Animalia")
+                    }
+                    HStack {
+                        Text("Location:")
+                            .fontWeight(.heavy)
+                        Text("Pakistan")
+                    }
                     
-                    Text("Location:")
-                        .bold()
-                    Text("")
-                    Text("Other Name:")
-                        .bold()
-                    Text("")
+                    HStack {
+                        Text("Other Name:")
+                            .fontWeight(.heavy)
+                        Text("Snake Eater")
+                    }
+                    
                     
                 }
             
             
             
-        }.background(Color.gray)
+        }
         
     }
     
@@ -64,15 +71,4 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-/*
- 
 
- Text("Kingdom:")
-     .bold()
- 
- Text("City:")
-     .bold()
- Text("Sport:")
-     .bold()
- 
- */

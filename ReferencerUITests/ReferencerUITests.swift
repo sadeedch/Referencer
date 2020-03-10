@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import Referencer
 
 class ReferencerUITests: XCTestCase {
 
@@ -30,6 +31,16 @@ class ReferencerUITests: XCTestCase {
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        func correctImage() {
+            let image = UIImage(named: "markhor")
+            let imageView = UIImageView(image: image)
+            imageView.accessibilityLabel = "markhor"
+            
+            
+            let app = XCUIApplication()
+            XCTAssert(app.images["markhor"].exists)
+        }
+        
     }
 
     func testLaunchPerformance() {

@@ -17,7 +17,7 @@ struct ContentView: View {
            
              // for the image
             Image("markhor")
-                .shadow(radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .shadow(radius: 20)
             
         // for title and sub heading
             VStack {
@@ -32,7 +32,7 @@ struct ContentView: View {
                     .padding(.bottom ,30)
                 }.frame(width: 370, alignment: .leading)
                 
-            VStack(){
+            VStack(alignment: .leading){
                 HStack {
                     Text("Kingdom:")
                         .fontWeight(.heavy)

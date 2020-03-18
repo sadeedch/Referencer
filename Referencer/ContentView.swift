@@ -20,6 +20,7 @@ struct ContentView: View {
 
 
 struct MasterView: View {
+    
     var groundList: GroundList
     var body: some View {
         List {
@@ -27,6 +28,7 @@ struct MasterView: View {
             NavigationLink (destination: DetailView(ground:
                 self.groundList.grounds[i])){
                     HStack{
+                       
                         Image("\(self.groundList.grounds[i].name)")
                         .resizable().frame(width: 120, height: 120)
                         Text("\(self.groundList.grounds[i].name)").bold()
@@ -44,7 +46,47 @@ struct MasterView: View {
 struct DetailView: View {
     var ground: Ground
     var body: some View {
-        Text("This is \(ground.name) in \(ground.location)")
+        VStack() {
+             
+            Image("\(ground.name)")
+        
+            VStack {
+             Text("\(ground.name)")
+                 .font(.largeTitle)
+                 .fontWeight(.bold)
+            
+             
+             Text("\(ground.location)")
+                 .font(.subheadline)
+                 .fontWeight(.light)
+                 .padding(.bottom ,30)
+             }.frame(width: 300, alignment: .leading)
+            
+            
+            
+            VStack(alignment: .leading){
+            HStack {
+                Text("Capacity:")
+                    .fontWeight(.heavy)
+                Text("\(ground.capacity)")
+                }
+            HStack {
+                Text("Opened:")
+                    .fontWeight(.heavy)
+                Text("\(ground.opened)")
+                }
+            HStack {
+                Text("Owner:")
+                    .fontWeight(.heavy)
+                Text("\(ground.owner)")
+                }
+            }
+
+            
+            
+            //Text("This is \(ground.name) in \(ground.location)")
+        }
+        
     }
 }
 

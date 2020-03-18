@@ -26,7 +26,13 @@ struct MasterView: View {
             ForEach(0..<groundList.grounds.count) { i in
             NavigationLink (destination: DetailView(ground:
                 self.groundList.grounds[i])){
-                    Text("\(self.groundList.grounds[i].name)")
+                    HStack{
+                        Image("\(self.groundList.grounds[i].name)")
+                        .resizable().frame(width: 120, height: 120)
+                        Text("\(self.groundList.grounds[i].name)").bold()
+                        Text("\(self.groundList.grounds[i].location)")
+                        
+                    }
                 }
             }
         }

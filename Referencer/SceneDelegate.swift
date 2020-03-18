@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     let groundList = GroundList ()
-    let ground = Ground ("MCG", "Melbourne")
+    //let ground = Ground ("MCG", "Melbourne")
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -25,6 +25,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         groundList.grounds.append(Ground("MCG","Melbourne"))
         groundList.grounds.append(Ground("Gabba","Brisbane"))
+        groundList.grounds.append(Ground("SCG","Sydney"))
+        groundList.grounds.append(Ground("Optus Stadium","Perth"))
+        groundList.grounds.append(Ground("Adelaide Oval","Adelaide"))
+        
         let contentView = ContentView(groundList: groundList)
 
         // Use a UIHostingController as window root view controller.

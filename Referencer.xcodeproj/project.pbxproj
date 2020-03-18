@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E26EA4DD242268DD002287A3 /* Ground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EA4DC242268DD002287A3 /* Ground.swift */; };
+		E26EA4DF24226ED4002287A3 /* GroundList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26EA4DE24226ED4002287A3 /* GroundList.swift */; };
 		E27FA9D2240E915400A56F4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FA9D1240E915400A56F4A /* AppDelegate.swift */; };
 		E27FA9D4240E915400A56F4A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FA9D3240E915400A56F4A /* SceneDelegate.swift */; };
 		E27FA9D6240E915400A56F4A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FA9D5240E915400A56F4A /* ContentView.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		E26EA4DC242268DD002287A3 /* Ground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ground.swift; sourceTree = "<group>"; };
+		E26EA4DE24226ED4002287A3 /* GroundList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroundList.swift; sourceTree = "<group>"; };
 		E27FA9CE240E915400A56F4A /* Referencer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Referencer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27FA9D1240E915400A56F4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E27FA9D3240E915400A56F4A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				E27FA9D1240E915400A56F4A /* AppDelegate.swift */,
 				E27FA9D3240E915400A56F4A /* SceneDelegate.swift */,
 				E26EA4DC242268DD002287A3 /* Ground.swift */,
+				E26EA4DE24226ED4002287A3 /* GroundList.swift */,
 				E27FA9D5240E915400A56F4A /* ContentView.swift */,
 				E27FA9D7240E915500A56F4A /* Assets.xcassets */,
 				E27FA9DC240E915500A56F4A /* LaunchScreen.storyboard */,
@@ -274,6 +277,7 @@
 				E27FA9D4240E915400A56F4A /* SceneDelegate.swift in Sources */,
 				E26EA4DD242268DD002287A3 /* Ground.swift in Sources */,
 				E27FA9D6240E915400A56F4A /* ContentView.swift in Sources */,
+				E26EA4DF24226ED4002287A3 /* GroundList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

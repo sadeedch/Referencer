@@ -9,19 +9,42 @@
 import SwiftUI
 
 struct ContentView: View {
-    
+    var groundList: GroundList
+    var body: some View {
+       NavigationView {
+        MasterView(groundList: groundList)
+            .navigationBarTitle("Sports Grounds List")
+       }
+    }
+}
+
+
+struct MasterView: View {
+    var groundList: GroundList
+    var body: some View {
+        List {
+            ForEach(0..<groundList.grounds.count) { i in
+            NavigationLink (destination: DetailView(ground:
+                self.groundList.grounds[i])){
+                    Text("\(self.groundList.grounds[i].name)")
+                }
+            }
+        }
+    }
+}
+
+
+
+struct DetailView: View {
     var ground: Ground
-    
     var body: some View {
         Text("This is \(ground.name) in \(ground.location)")
-        
     }
-    
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(ground: Ground ("MCG","Melbourne"))
+        ContentView(groundList: GroundList())
     }
 }
 

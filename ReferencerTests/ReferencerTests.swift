@@ -22,8 +22,19 @@ class ReferencerTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        let name = "MCG"
+        let location = "Melbourne"
+        let capacity = 1000242
+        let opened = "1853"
+        let owner = "Melbourne Cricket Club"
         
         
+        let test_values = Ground(name, location, capacity, opened, owner)
+        XCTAssertEqual(test_values.name, name)
+        XCTAssertEqual(test_values.location, location)
+        XCTAssertEqual(test_values.capacity, capacity)
+        XCTAssertEqual(test_values.opened, opened)
+        XCTAssertEqual(test_values.owner, owner)
        
     }
 

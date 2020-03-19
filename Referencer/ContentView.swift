@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+
+
 struct ContentView: View {
     var groundList: GroundList
     var body: some View {
@@ -19,130 +21,10 @@ struct ContentView: View {
 }
 
 
-struct MasterView: View {
-    
-    var groundList: GroundList
-    var body: some View {
-        List {
-            ForEach(0..<groundList.grounds.count) { i in
-            NavigationLink (destination: DetailView(ground:
-                self.groundList.grounds[i])){
-                    HStack{
-                       
-                        Image("\(self.groundList.grounds[i].name)")
-                        .resizable().frame(width: 120, height: 120)
-                        Text("\(self.groundList.grounds[i].name)").bold()
-                        Text("\(self.groundList.grounds[i].location)")
-                        
-                    }
-                }
-            }
-        }
-    }
-}
-
-
-
-struct DetailView: View {
-    var ground: Ground
-    var body: some View {
-        VStack() {
-             
-            Image("\(ground.name)")
-        
-            VStack {
-             Text("\(ground.name)")
-                 .font(.largeTitle)
-                 .fontWeight(.bold)
-            
-             
-             Text("\(ground.location)")
-                 .font(.subheadline)
-                 .fontWeight(.light)
-                 .padding(.bottom ,30)
-             }.frame(width: 300, alignment: .leading)
-            
-            
-            
-            VStack(alignment: .leading){
-            HStack {
-                Text("Capacity:")
-                    .fontWeight(.heavy)
-                Text("\(ground.capacity)")
-                }
-            HStack {
-                Text("Opened:")
-                    .fontWeight(.heavy)
-                Text("\(ground.opened)")
-                }
-            HStack {
-                Text("Owner:")
-                    .fontWeight(.heavy)
-                Text("\(ground.owner)")
-                }
-            }
-
-            
-            
-            //Text("This is \(ground.name) in \(ground.location)")
-        }
-        
-    }
-}
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(groundList: GroundList())
     }
 }
-
-
-/*
- 
- 
- 
-     VStack() {
-        
-          // for the image
-         Image("markhor")
-             .shadow(radius: 20)
-         
-     // for title and sub heading
-         VStack {
-             Text("Markhor")
-                 .font(.largeTitle)
-                 .fontWeight(.bold)
-            
-             
-             Text("Capra falconeri")
-                 .font(.subheadline)
-                 .fontWeight(.light)
-                 .padding(.bottom ,30)
-             }.frame(width: 370, alignment: .leading)
-             
-         VStack(alignment: .leading){
-             HStack {
-                 Text("Kingdom:")
-                     .fontWeight(.heavy)
-                 Text("Animalia")
-                 }
-             HStack {
-                 Text("Location:")
-                     .fontWeight(.heavy)
-                 Text("Pakistan")
-                 }
-             HStack {
-                 Text("Other Name:")
-                     .fontWeight(.heavy)
-                 Text("Snake Eater")
-                 }
-             }
-     }
-     
- 
- */
-
-
-
 
 

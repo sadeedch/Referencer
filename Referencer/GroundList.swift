@@ -6,6 +6,7 @@
 //  Copyright © 2020 Sadeed Ahmad. All rights reserved.
 //
 
+//class GroundList extends class Ground by having an array of grounds
 class GroundList {
     var grounds: [Ground] = []
     

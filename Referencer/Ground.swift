@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sadeed Ahmad. All rights reserved.
 //
 
-
+// Class Ground to have properties of a ground and an initializer
 class Ground {
     var name: String = ""
     var location: String = ""

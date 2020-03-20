@@ -7,7 +7,6 @@
 //
 
 class GroundList {
-    // variable grounds contains the array of Ground
     var grounds: [Ground] = []
     
 }

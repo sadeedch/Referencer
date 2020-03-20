@@ -14,7 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     let groundList = GroundList ()
-    //let ground = Ground ("MCG", "Melbourne")
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -23,6 +22,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
+        
+        //appending data to array
         groundList.grounds.append(Ground("MCG","Melbourne", 100024, "1853", "Melbourne Cricket Club"))
         groundList.grounds.append(Ground("Gabba","Brisbane", 42000, "1895", "Stadiums QLD"))
         groundList.grounds.append(Ground("SCG","Sydney", 48601, "1848", "Sydney Cricket Ground Trust"))

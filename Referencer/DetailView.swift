@@ -19,6 +19,7 @@ struct DetailView: View {
             Image("\(ground.name)")
         
             VStack {
+                
                 Text("\(ground.name)")
                      .font(.largeTitle)
                      .fontWeight(.bold)

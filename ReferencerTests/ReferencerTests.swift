@@ -27,20 +27,23 @@ class ReferencerTests: XCTestCase {
         let capacity = 1000242
         let opened = "1853"
         let owner = "Melbourne Cricket Club"
+        let notes = ""
         
         
-        let test_values = Ground(name, location, capacity, opened, owner)
+        let test_values = Ground(name, location, capacity, opened, owner, notes)
         XCTAssertEqual(test_values.name, name)
         XCTAssertEqual(test_values.location, location)
         XCTAssertEqual(test_values.capacity, capacity)
         XCTAssertEqual(test_values.opened, opened)
         XCTAssertEqual(test_values.owner, owner)
+        XCTAssertEqual(test_values.notes, notes)
+        
        
     }
     
     func testGroundList() {
-        let ground1 = Ground("MCG", "Melbourne", 100242, "1853", "Melbourne Cricket Club")
-        let ground2 = Ground("Optus Stadium","Perth", 60000, "2017", "Vanues Live")
+        let ground1 = Ground("MCG", "Melbourne", 100242, "1853", "Melbourne Cricket Club", "")
+        let ground2 = Ground("Optus Stadium","Perth", 60000, "2017", "Vanues Live", "")
         
         let grounds: [Ground] = [ground1, ground2]
         XCTAssertNotNil(grounds[0].name)

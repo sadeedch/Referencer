@@ -8,12 +8,12 @@
 
 // Class Ground to have properties of a ground and an initializer
 class Ground {
-    var name: String = ""
-    var location: String = ""
+    var name: String
+    var location: String
     var capacity: Int
-    var opened: String = ""
-    var owner: String = ""
-    var notes: String = ""
+    var opened: String
+    var owner: String
+    var notes: String
     
     
     init(_ groundName: String, _ groundLocation: String, _ groundCapacity: Int, _ groundOpened: String, _ groundOwner: String, _ groundNotes: String) {

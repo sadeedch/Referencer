@@ -15,13 +15,13 @@ struct MasterView: View {
     var body: some View {
         List {
             ForEach(0..<groundList.grounds.count) { i in        // iterating through all the grounds
-                NavigationLink (destination: DetailView(ground:     //destination will take to detailview after clicking on a ground
-                self.groundList.grounds[i])){
+                //destination will take to detailview after clicking on a ground
+                NavigationLink (destination: DetailView(ground:self.groundList.grounds[i])){
                     HStack{
-                       
                         Image("\(self.groundList.grounds[i].name)")
-                        .resizable().frame(width: 120, height: 120)
-                        Text("\(self.groundList.grounds[i].name)").bold()
+                            .resizable().frame(width: 120, height: 120)
+                        Text("\(self.groundList.grounds[i].name)")
+                            .bold()
                         Text("\(self.groundList.grounds[i].location)")
                         
                     }

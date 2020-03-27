@@ -12,11 +12,11 @@ import XCTest
 class ReferencerTests: XCTestCase {
     
     let testGroundValues = Ground (
-        "MCG",
-        "Melbourne",
-        1000242,
-        "1853",
-        "Melbourne Cricket Club",
+        "SCG",
+        "Sydney",
+        48601,
+        "1848",
+        "Sydney Cricket Ground Trust",
         ""
     
     )
@@ -70,7 +70,30 @@ class ReferencerTests: XCTestCase {
         
     }
     
-    func testEmptyNotes (){
+    func testGroundName() {
+        XCTAssertNotNil(testGroundValues.name)
+        XCTAssertEqual(testGroundValues.name, "SCG")
+    }
+    
+    func testGroundLocation() {
+        XCTAssertNotNil(testGroundValues.location)
+        XCTAssertEqual(testGroundValues.location, "Sydney")
+    }
+    
+    func testGroundCapacity() {
+        XCTAssertNotNil(testGroundValues.capacity)
+        XCTAssertEqual(testGroundValues.capacity, 48601)
+    }
+    func testGroundOpened() {
+        XCTAssertNotNil(testGroundValues.opened)
+        XCTAssertEqual(testGroundValues.opened, "1848")
+    }
+    func testGroundOwner() {
+        XCTAssertNotNil(testGroundValues.owner)
+        XCTAssertEqual(testGroundValues.owner, "Sydney Cricket Ground Trust")
+    }
+    
+    func testGroundNotes (){
         XCTAssertEqual(testGroundValues.notes, "")
     }
     

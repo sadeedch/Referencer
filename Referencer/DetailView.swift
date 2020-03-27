@@ -12,7 +12,7 @@ import SwiftUI
 
 // showing the details of the grounds
 struct DetailView: View {
-    var ground: Ground
+    @State var ground: Ground
     var body: some View {
         VStack() {
              
@@ -28,7 +28,7 @@ struct DetailView: View {
                 Text("\(ground.location)")
                      .font(.subheadline)
                      .fontWeight(.light)
-                     .padding(.bottom ,30)
+                     .padding(.bottom)
                  }.frame(width: 300, alignment: .leading)
             
             
@@ -49,8 +49,23 @@ struct DetailView: View {
                         .fontWeight(.heavy)
                     Text("\(ground.owner)")
                     }
-            }
+                
+            }.padding()
+           
+            HStack {
+                Text("Notes:")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 20))
+                TextField("Enter your notes...", text: $ground.notes)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            }.frame(width: 350, height: nil)
+     
+                          
         }
+        
+        
+        
+          
     }
 }
 

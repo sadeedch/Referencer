@@ -13,13 +13,15 @@ class Ground {
     var capacity: Int
     var opened: String = ""
     var owner: String = ""
+    var notes: String = ""
     
     
-    init(_ groundName: String, _ groundLocation: String, _ groundCapacity: Int, _ groundOpened: String, _ groundOwner: String) {
+    init(_ groundName: String, _ groundLocation: String, _ groundCapacity: Int, _ groundOpened: String, _ groundOwner: String, _ groundNotes: String) {
         name = groundName
         location = groundLocation
         capacity = groundCapacity
         opened = groundOpened
         owner = groundOwner
+        notes = groundNotes
     }
 }

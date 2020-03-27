@@ -10,6 +10,16 @@ import XCTest
 @testable import Referencer
 
 class ReferencerTests: XCTestCase {
+    
+    let testGroundValues = Ground (
+        "MCG",
+        "Melbourne",
+        1000242,
+        "1853",
+        "Melbourne Cricket Club",
+        ""
+    
+    )
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -18,6 +28,9 @@ class ReferencerTests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    
+    
 
     func testGround() {
         // This is an example of a functional test case.
@@ -56,6 +69,11 @@ class ReferencerTests: XCTestCase {
         
         
     }
+    
+    func testEmptyNotes (){
+        XCTAssertEqual(testGroundValues.notes, "")
+    }
+    
     
     
 

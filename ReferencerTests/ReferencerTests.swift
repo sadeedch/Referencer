@@ -10,7 +10,7 @@ import XCTest
 @testable import Referencer
 
 class ReferencerTests: XCTestCase {
-    
+    // testGroundValues is the data which will be used for unit tests.
     let testGroundValues = Ground (
         "SCG",
         "Sydney",
@@ -31,10 +31,12 @@ class ReferencerTests: XCTestCase {
     
     
     
-
+    /*
+    This function testGround tests that the values are equal to the test data
+     by using the Ground class and XCTAssertEqual function.
+    */
     func testGround() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+       
         let name = "MCG"
         let location = "Melbourne"
         let capacity = 1000242
@@ -54,6 +56,10 @@ class ReferencerTests: XCTestCase {
        
     }
     
+    /*
+    This function tests that does the passing of an object into the array of objects works.
+    It uses the XCTAssertNotNill function to confirm that the values are not nill.
+    */
     func testGroundList() {
         let ground1 = Ground("MCG", "Melbourne", 100242, "1853", "Melbourne Cricket Club", "")
         let ground2 = Ground("Optus Stadium","Perth", 60000, "2017", "Vanues Live", "")
@@ -66,10 +72,11 @@ class ReferencerTests: XCTestCase {
         XCTAssertNotNil(grounds[0].owner)
         
         XCTAssertEqual(2, grounds.count)
-        
-        
     }
-    
+    /*
+       The following functions tests for different values of Ground and comparing them against the
+     test data. They check if they are equal to the given data and whether they are nil or not.
+    */
     func testGroundName() {
         XCTAssertNotNil(testGroundValues.name)
         XCTAssertEqual(testGroundValues.name, "SCG")
@@ -96,8 +103,6 @@ class ReferencerTests: XCTestCase {
     func testGroundNotes (){
         XCTAssertEqual(testGroundValues.notes, "")
     }
-    
-    
     
 
     func testPerformanceExample() {

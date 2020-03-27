@@ -15,7 +15,7 @@ class Ground {
     var owner: String
     var notes: String
     
-    
+    // initilizer of the Ground class. 
     init(_ groundName: String, _ groundLocation: String, _ groundCapacity: Int, _ groundOpened: String, _ groundOwner: String, _ groundNotes: String) {
         name = groundName
         location = groundLocation

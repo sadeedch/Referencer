@@ -9,7 +9,7 @@
 import SwiftUI
 
 
-
+// content view to display the Navigation bar with the title. 
 struct ContentView: View {
     var groundList: GroundList
     var body: some View {

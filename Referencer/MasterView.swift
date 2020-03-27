@@ -14,10 +14,12 @@ struct MasterView: View {
     var groundList: GroundList
     var body: some View {
         List {
-            ForEach(0..<groundList.grounds.count) { i in        // iterating through all the grounds
+            ForEach(0..<groundList.grounds.count) { i in        // this loop iterate through list of all the grounds
                 //destination will take to detailview after clicking on a ground
                 NavigationLink (destination: DetailView(ground:self.groundList.grounds[i])){
-                    HStack{
+                    HStack{     //This horizontal stack contains the Ground image, Ground name and its location.
+                        /* The image is being used form the Assets folder which contains image with the same name
+                        as the ground name of a particular ground*/
                         Image("\(self.groundList.grounds[i].name)")
                             .resizable().frame(width: 120, height: 120)
                         Text("\(self.groundList.grounds[i].name)")

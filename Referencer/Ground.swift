@@ -23,5 +23,6 @@ class Ground {
         opened = groundOpened
         owner = groundOwner
         notes = groundNotes
+        
     }
 }

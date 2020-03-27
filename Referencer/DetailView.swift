@@ -15,6 +15,13 @@ struct DetailView: View {
     @State var ground: Ground
     var body: some View {
         VStack() {
+            VStack(alignment: .leading) {
+                Text("Notes:")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 20))
+                TextField("Enter your notes...", text: $ground.notes)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            }.frame(width: 350, height: nil)
              
             Image("\(ground.name)")
         
@@ -52,14 +59,6 @@ struct DetailView: View {
                 
             }.padding()
            
-            HStack {
-                Text("Notes:")
-                    .fontWeight(.bold)
-                    .font(Font.system(size: 20))
-                TextField("Enter your notes...", text: $ground.notes)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
-            }.frame(width: 350, height: nil)
-     
                           
         }
         

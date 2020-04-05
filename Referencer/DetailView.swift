@@ -34,6 +34,7 @@ struct DetailView: View {
                 Text("\(ground.name)")
                      .font(.largeTitle)
                      .fontWeight(.bold)
+               
                 
                 Text("\(ground.location)")
                      .font(.subheadline)

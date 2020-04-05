@@ -27,11 +27,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         /*
         This is the dummy data created to populate and append the array.
         */
-        groundList.grounds.append(Ground("MCG","Melbourne", 100024, "1853", "Melbourne Cricket Club", ""))
-        groundList.grounds.append(Ground("Gabba","Brisbane", 42000, "1895", "Stadiums QLD", ""))
-        groundList.grounds.append(Ground("SCG","Sydney", 48601, "1848", "Sydney Cricket Ground Trust", ""))
-        groundList.grounds.append(Ground("Optus Stadium","Perth", 60000, "2017", "Vanues Live", ""))
-        groundList.grounds.append(Ground("Adelaide Oval","Adelaide", 55317, "1871", "SA Govt", ""))
+        groundList.grounds.append(Ground("MCG","Melbourne", "100024", "1853", "Melbourne Cricket Club", ""))
+        groundList.grounds.append(Ground("Gabba","Brisbane", "42000", "1895", "Stadiums QLD", ""))
+        groundList.grounds.append(Ground("SCG","Sydney", "48601", "1848", "Sydney Cricket Ground Trust", ""))
+        groundList.grounds.append(Ground("Optus Stadium","Perth", "60000", "2017", "Vanues Live", ""))
+        groundList.grounds.append(Ground("Adelaide Oval","Adelaide", "55317", "1871", "SA Govt", ""))
          
         
         let contentView = ContentView(groundList: groundList)

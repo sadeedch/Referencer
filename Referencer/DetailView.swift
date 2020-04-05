@@ -30,39 +30,39 @@ struct DetailView: View {
             Image("\(ground.name)")
         
             // Vertical Stack to show the Ground name and location.
-            VStack {
-                Text("\(ground.name)")
-                     .font(.largeTitle)
-                     .fontWeight(.bold)
-               
+            VStack() {
                 
-                Text("\(ground.location)")
-                     .font(.subheadline)
-                     .fontWeight(.light)
-                     .padding(.bottom)
+                TextField("Ground name...", text: $ground.name)
+                    .font(.largeTitle)
+                
+                TextField("Ground location...", text: $ground.location)
+                    .font(.subheadline)
+                    .padding(.bottom)
+                    
+                     
+        
                  }.frame(width: 300, alignment: .leading)
             
             
             
-            VStack(alignment: .leading){
+            VStack(){
                 HStack {                    // Horizontal stack to show the capcaity of a ground
                     Text("Capacity:")
                         .fontWeight(.heavy)
-                    Text("\(ground.capacity)")
+                    TextField("Ground capacity...", text: $ground.capacity)
                     }
                 HStack {                    // Horizontal stack to show the opening date of a ground
                     Text("Opened:")
                         .fontWeight(.heavy)
-                    Text("\(ground.opened)")
+                    TextField("Ground opening date...", text: $ground.opened)
                     }
                 HStack {                    // Horizontal stack to show the owner of a ground
                     Text("Owner:")
                         .fontWeight(.heavy)
-                    Text("\(ground.owner)")
+                    TextField("Ground owner...", text: $ground.owner)
                     }
-            }
+            }.frame(width: 300, alignment: .leading)
         }
     }
 }
-
 

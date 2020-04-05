@@ -23,6 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
+        /*
+        let MCG = Ground ("MCG","Melbourne", "100024", "1853", "Melbourne Cricket Club", "")
+        let Gabba = Ground("Gabba","Brisbane", "42000", "1895", "Stadiums QLD", "")
+        
+        groundList.add(MCG)
+        groundList.add(Gabba)
+        */
         
         /*
         This is the dummy data created to populate and append the array.

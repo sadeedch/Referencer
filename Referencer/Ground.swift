@@ -7,13 +7,15 @@
 //
 
 // Class Ground to have properties of a ground and an initializer
-class Ground {
-    var name: String
-    var location: String
-    var capacity: String
-    var opened: String
-    var owner: String
-    var notes: String
+import SwiftUI
+
+class Ground: ObservableObject {
+    @Published var name: String
+    @Published var location: String
+    @Published var capacity: String
+    @Published var opened: String
+    @Published var owner: String
+    @Published var notes: String
     
     // initilizer of the Ground class. 
     init(_ groundName: String, _ groundLocation: String, _ groundCapacity: String, _ groundOpened: String, _ groundOwner: String, _ groundNotes: String) {

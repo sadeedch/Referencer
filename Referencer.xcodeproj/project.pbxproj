@@ -17,6 +17,7 @@
 		E27FA9DE240E915500A56F4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E27FA9DC240E915500A56F4A /* LaunchScreen.storyboard */; };
 		E27FA9E9240E915500A56F4A /* ReferencerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FA9E8240E915500A56F4A /* ReferencerTests.swift */; };
 		E27FA9F4240E915500A56F4A /* ReferencerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E27FA9F3240E915500A56F4A /* ReferencerUITests.swift */; };
+		E2B15D40243A7062000B9C2F /* RowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2B15D3F243A7062000B9C2F /* RowView.swift */; };
 		E2DAC9E12423383D0086F959 /* MasterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DAC9E02423383D0086F959 /* MasterView.swift */; };
 		E2DAC9E3242338D10086F959 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2DAC9E2242338D10086F959 /* DetailView.swift */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		E27FA9EF240E915500A56F4A /* ReferencerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReferencerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E27FA9F3240E915500A56F4A /* ReferencerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReferencerUITests.swift; sourceTree = "<group>"; };
 		E27FA9F5240E915500A56F4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2B15D3F243A7062000B9C2F /* RowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowView.swift; sourceTree = "<group>"; };
 		E2DAC9E02423383D0086F959 /* MasterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterView.swift; sourceTree = "<group>"; };
 		E2DAC9E2242338D10086F959 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -114,6 +116,7 @@
 				E27FA9D5240E915400A56F4A /* ContentView.swift */,
 				E2DAC9E2242338D10086F959 /* DetailView.swift */,
 				E2DAC9E02423383D0086F959 /* MasterView.swift */,
+				E2B15D3F243A7062000B9C2F /* RowView.swift */,
 				E27FA9D7240E915500A56F4A /* Assets.xcassets */,
 				E27FA9DC240E915500A56F4A /* LaunchScreen.storyboard */,
 				E27FA9DF240E915500A56F4A /* Info.plist */,
@@ -282,6 +285,7 @@
 				E2DAC9E12423383D0086F959 /* MasterView.swift in Sources */,
 				E27FA9D2240E915400A56F4A /* AppDelegate.swift in Sources */,
 				E27FA9D4240E915400A56F4A /* SceneDelegate.swift in Sources */,
+				E2B15D40243A7062000B9C2F /* RowView.swift in Sources */,
 				E2DAC9E3242338D10086F959 /* DetailView.swift in Sources */,
 				E26EA4DD242268DD002287A3 /* Ground.swift in Sources */,
 				E27FA9D6240E915400A56F4A /* ContentView.swift in Sources */,

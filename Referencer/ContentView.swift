@@ -11,13 +11,24 @@ import SwiftUI
 
 // content view to display the Navigation bar with the title. 
 struct ContentView: View {
-    var groundList: GroundList
+    @ObservedObject var groundList: GroundList
     var body: some View {
        NavigationView {
         MasterView(groundList: groundList)
             .navigationBarTitle("Sports Grounds List")
+            .navigationBarItems(leading: EditButton(),
+            trailing: Button(
+                action: {
+                    withAnimation { self.groundList.grounds.append(Ground(" 1 ", "2","3","4","5","6" )) }
+                }
+                
+                ) { Image(systemName: "plus") }
+            )
        }
     }
+    
+    //   withAnimation { self.viewModel.grounds.append(Ground()) }
+    
 }
 
 

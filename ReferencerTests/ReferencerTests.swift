@@ -14,7 +14,7 @@ class ReferencerTests: XCTestCase {
     let testGroundValues = Ground (
         "SCG",
         "Sydney",
-        48601,
+        "48601",
         "1848",
         "Sydney Cricket Ground Trust",
         ""
@@ -39,7 +39,7 @@ class ReferencerTests: XCTestCase {
        
         let name = "MCG"
         let location = "Melbourne"
-        let capacity = 1000242
+        let capacity = "1000242"
         let opened = "1853"
         let owner = "Melbourne Cricket Club"
         let notes = ""
@@ -61,8 +61,8 @@ class ReferencerTests: XCTestCase {
     It uses the XCTAssertNotNill function to confirm that the values are not nill.
     */
     func testGroundList() {
-        let ground1 = Ground("MCG", "Melbourne", 100242, "1853", "Melbourne Cricket Club", "")
-        let ground2 = Ground("Optus Stadium","Perth", 60000, "2017", "Vanues Live", "")
+        let ground1 = Ground("MCG", "Melbourne", "100242", "1853", "Melbourne Cricket Club", "")
+        let ground2 = Ground("Optus Stadium","Perth", "60000", "2017", "Vanues Live", "")
         
         let grounds: [Ground] = [ground1, ground2]
         XCTAssertNotNil(grounds[0].name)
@@ -89,7 +89,7 @@ class ReferencerTests: XCTestCase {
     
     func testGroundCapacity() {
         XCTAssertNotNil(testGroundValues.capacity)
-        XCTAssertEqual(testGroundValues.capacity, 48601)
+        XCTAssertEqual(testGroundValues.capacity, "48601")
     }
     func testGroundOpened() {
         XCTAssertNotNil(testGroundValues.opened)

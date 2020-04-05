@@ -11,10 +11,12 @@ import SwiftUI
 
 // master view with image name and lcation of grounds
 struct MasterView: View {
-    var groundList: GroundList
+    @ObservedObject var groundList: GroundList
     var body: some View {
         List {
-            ForEach(0..<groundList.grounds.count) { i in        // this loop iterate through list of all the grounds
+            //ForEach(0..<groundList.grounds.count, id: \.self) { i in
+            
+            ForEach(0..<groundList.grounds.count, id: \.self) { i in        // this loop iterate through list of all the grounds
                 //destination will take to detailview after clicking on a ground
                 NavigationLink (destination: DetailView(ground:self.groundList.grounds[i])){
                     HStack{     //This horizontal stack contains the Ground image, Ground name and its location.
@@ -28,8 +30,17 @@ struct MasterView: View {
                         
                     }
                 }
+            }.onDelete {indices in
+                indices.forEach { self.groundList.grounds.remove(at: $0) }
             }
         }
     }
+    
+    
+    
+    
+   
 }
+
+
 

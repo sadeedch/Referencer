@@ -7,7 +7,13 @@
 //
 
 //class GroundList extends class Ground by having an array of grounds
-class GroundList {
-    var grounds: [Ground] = []
+import SwiftUI
+
+class GroundList: ObservableObject, Identifiable {
+   //@Published var grounds: [Ground] = []
+    
+   @Published var grounds = [Ground] ()
+    
+    
     
 }

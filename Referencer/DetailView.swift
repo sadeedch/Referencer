@@ -12,7 +12,7 @@ import SwiftUI
 
 // This Detail View shows the details of all the ground including its different properties.
 struct DetailView: View {
-    @State var ground: Ground    //Singular instance of ground containing data
+    @ObservedObject public var ground: Ground    //Singular instance of ground containing data
     var body: some View {
         
         VStack() {               // all the Ground data shown in this view is included in this Vertical Stack.

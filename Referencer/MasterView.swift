@@ -22,7 +22,7 @@ struct MasterView: View {
                     HStack{     //This horizontal stack contains the Ground image, Ground name and its location.
                         /* The image is being used form the Assets folder which contains image with the same name
                         as the ground name of a particular ground*/
-                        Image("\(self.groundList.grounds[i].name)")
+                        Image("\(self.groundList.grounds[i].image)")
                             .resizable().frame(width: 120, height: 120)
                         Text("\(self.groundList.grounds[i].name)")
                             .bold()

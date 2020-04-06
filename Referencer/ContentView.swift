@@ -19,7 +19,7 @@ struct ContentView: View {
             .navigationBarItems(leading: EditButton(),
             trailing: Button(
                 action: {
-                    withAnimation { self.groundList.grounds.append(Ground(" 1 ", "2","3","4","5","6" )) }
+                    withAnimation { self.groundList.grounds.append(Ground("Ground Image...","Ground Name...", "Ground Location...","","","","" )) }
                 }
                 
                 ) { Image(systemName: "plus") }

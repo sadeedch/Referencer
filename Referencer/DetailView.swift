@@ -13,6 +13,7 @@ import SwiftUI
 // This Detail View shows the details of all the ground including its different properties.
 struct DetailView: View {
     @ObservedObject public var ground: Ground    //Singular instance of ground containing data
+    @State var tempImageURL: String = ""            // tempImageURL : a temporary variable to hold the url of image entered by user
     var body: some View {
         
         VStack() {               // all the Ground data shown in this view is included in this Vertical Stack.
@@ -23,14 +24,22 @@ struct DetailView: View {
                     .font(Font.system(size: 20))
                 //  text field to enter the notes and the entered text is bounded to ground.notes
                 TextField("Enter your notes...", text: $ground.notes)
-                .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
             }.frame(width: 350, height: nil)
             
-            //shwoing the image of each ground
-            (ground.image).resizable().frame(width: 360, height: 300)
-                   
             
-            
+            VStack(alignment: .leading) {  // This vertical stack shows the image and Text Field to enter url for a new image
+                Text("Image URL:")
+                    .fontWeight(.bold)
+                    .font(Font.system(size: 20))
+                /*  text field to enter the url of new image for a ground and the entered url is bounded to $tempImageURL.
+                    this temporary value is then sent to the url property of class ground. */
+                TextField("Pase the image URL here", text: $tempImageURL, onCommit: { self.ground.url = self.tempImageURL
+                    }).textFieldStyle(RoundedBorderTextFieldStyle())
+                
+                // (ground.image) shwos the image of each ground
+                (ground.image).resizable().frame(width: 360, height: 300)
+            }.frame(width: 350, height: nil)
             
            
         
@@ -44,8 +53,6 @@ struct DetailView: View {
                     .font(.subheadline)
                     .padding(.bottom)
                     
-                     
-        
                  }.frame(width: 300, alignment: .leading)
             
             

@@ -8,7 +8,7 @@
 
 import Foundation
 import SwiftUI
-import UIKit
+
 
 func downloadedImage (_ img: String)-> Image {
 

@@ -11,3 +11,17 @@ import Foundation
 import SwiftUI
 
 
+struct RowView: View {
+    @ObservedObject var groundRow: Ground
+    var body: some View {
+        
+        // This horizontal stack contains the Ground image, Ground name and its location.
+           
+        HStack {
+            (groundRow.image).resizable().frame(width: 120, height: 120)
+            Text(self.groundRow.name).bold()
+            Text(self.groundRow.location)
+        }
+           
+    }
+}

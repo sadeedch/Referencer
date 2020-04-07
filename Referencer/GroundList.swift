@@ -10,10 +10,6 @@
 import SwiftUI
 
 class GroundList: ObservableObject, Identifiable {
-   //@Published var grounds: [Ground] = []
-    
-   @Published var grounds = [Ground] ()
-    
-    
-    
+   @Published var grounds: [Ground] = []
+
 }

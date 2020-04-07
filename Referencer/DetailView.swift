@@ -13,7 +13,7 @@ import SwiftUI
 // This Detail View shows the details of all the ground including its different properties.
 struct DetailView: View {
     @ObservedObject public var ground: Ground    //Singular instance of ground containing data
-    @State var tempImageURL: String = ""            // tempImageURL : a temporary variable to hold the url of image entered by user
+    @State var tempImageURL: String = ""         // tempImageURL : a temporary variable to hold the url of image entered by user
     var body: some View {
         
         VStack() {               // all the Ground data shown in this view is included in this Vertical Stack.
@@ -37,7 +37,7 @@ struct DetailView: View {
                 TextField("Pase the image URL here", text: $tempImageURL, onCommit: { self.ground.url = self.tempImageURL
                     }).textFieldStyle(RoundedBorderTextFieldStyle())
                 
-                // (ground.image) shwos the image of each ground
+                // (ground.image) shows the image of each ground
                 (ground.image).resizable().frame(width: 360, height: 300)
             }.frame(width: 350, height: nil)
             

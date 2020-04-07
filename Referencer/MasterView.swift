@@ -14,27 +14,14 @@ struct MasterView: View {
     @ObservedObject var groundList: GroundList
     var body: some View {
         List {
-            //ForEach(0..<groundList.grounds.count, id: \.self) { i in
-            
-            ForEach(groundList.grounds) { i in        // this loop iterate through list of all the grounds
+            ForEach(groundList.grounds) { i in  // this loop iterate through list of all the grounds
                 //destination will take to detailview after clicking on a ground
                 NavigationLink (destination: DetailView(ground: i)){
-                        
                         RowView(groundRow: i)
-                        
-                                            
-                    
                 }
-            }.onDelete {indices in
-                indices.forEach { self.groundList.grounds.remove(at: $0) }
-            }
+            }.onDelete {indices in indices.forEach { self.groundList.grounds.remove(at: $0) }}
         }
     }
-    
-    
-    
-    
-   
 }
 
 

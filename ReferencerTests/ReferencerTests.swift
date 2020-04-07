@@ -7,11 +7,13 @@
 //
 
 import XCTest
+import SwiftUI
 @testable import Referencer
 
 class ReferencerTests: XCTestCase {
     // testGroundValues is the data which will be used for unit tests.
     let testGroundValues = Ground (
+        "",
         "SCG",
         "Sydney",
         "48601",
@@ -36,7 +38,7 @@ class ReferencerTests: XCTestCase {
      by using the Ground class and XCTAssertEqual function.
     */
     func testGround() {
-       
+        let url = ""
         let name = "MCG"
         let location = "Melbourne"
         let capacity = "1000242"
@@ -45,7 +47,8 @@ class ReferencerTests: XCTestCase {
         let notes = ""
         
         
-        let test_values = Ground(name, location, capacity, opened, owner, notes)
+        
+        let test_values = Ground(url, name, location, capacity, opened, owner, notes)
         XCTAssertEqual(test_values.name, name)
         XCTAssertEqual(test_values.location, location)
         XCTAssertEqual(test_values.capacity, capacity)
@@ -61,10 +64,11 @@ class ReferencerTests: XCTestCase {
     It uses the XCTAssertNotNill function to confirm that the values are not nill.
     */
     func testGroundList() {
-        let ground1 = Ground("MCG", "Melbourne", "100242", "1853", "Melbourne Cricket Club", "")
-        let ground2 = Ground("Optus Stadium","Perth", "60000", "2017", "Vanues Live", "")
+        let ground1 = Ground("","MCG", "Melbourne", "100242", "1853", "Melbourne Cricket Club", "")
+        let ground2 = Ground("","Optus Stadium","Perth", "60000", "2017", "Vanues Live", "")
         
         let grounds: [Ground] = [ground1, ground2]
+        XCTAssertNotNil(grounds[0].url)
         XCTAssertNotNil(grounds[0].name)
         XCTAssertNotNil(grounds[0].location)
         XCTAssertNotNil(grounds[0].capacity)
@@ -103,6 +107,37 @@ class ReferencerTests: XCTestCase {
     func testGroundNotes (){
         XCTAssertEqual(testGroundValues.notes, "")
     }
+    
+    /*
+    function : testDownloadedImage
+    Checks that if the url is valid to download an image.
+     */
+    
+    func testDownloadedImage() {
+        // Checks that if the url is valid to download an image.
+        guard let imageURL = URL(string:"https://cdn.pixabay.com/photo/2015/02/24/15/41/dog-647528_1280.jpg")
+            else {
+                return XCTFail("URL is invalid. Insert correct URL")
+        }
+        
+        // checks that if the data can be derived from the given url.
+        guard let imageData = try? Data(contentsOf: imageURL)
+            else {
+               return XCTFail("Could not download the image")
+        }
+        
+        // checks that if the image can be derived from the given data.
+        guard let uiImage = UIImage(data: imageData)
+            else {
+             return XCTFail("Data does not contain any image")
+           }
+        
+        // checks the the image created from the imageData is not nill. 
+        let downloadedImage = Image(uiImage: uiImage)
+        XCTAssertNotNil(downloadedImage)
+    }
+    
+    
     
 
     func testPerformanceExample() {

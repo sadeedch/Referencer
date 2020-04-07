@@ -16,26 +16,18 @@ struct ContentView: View {
        NavigationView {
         MasterView(groundList: groundList)
             .navigationBarTitle("Sports Grounds List")
+            /*  leading: EditButton() - specifies the edit button in the navigation bar on the left side
+                trailing: Button(action) - specifies the add button in the navigation bar on the right side
+                If the user clicks on add button, then it appends the ground array to add a new ground entry which is specified
+                in action. */
             .navigationBarItems(leading: EditButton(),
-            trailing: Button(
-                action: {
+            trailing: Button( action: {
                     withAnimation { self.groundList.grounds.append(Ground("","Ground Name...", "Ground Location...","","","","" )) }
-                }
-                
-                ) { Image(systemName: "plus") }
+                }) { Image(systemName: "plus") }
             )
-       }
-    }
-    
-    
-    
-}
-
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(groundList: GroundList())
+        }
     }
 }
+
 
 

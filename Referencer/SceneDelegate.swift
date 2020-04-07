@@ -23,20 +23,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view that provides the window contents.
         
-        /*
-        let MCG = Ground ("MCG","Melbourne", "100024", "1853", "Melbourne Cricket Club", "")
-        let Gabba = Ground("Gabba","Brisbane", "42000", "1895", "Stadiums QLD", "")
-        
-        groundList.add(MCG)
-        groundList.add(Gabba)
-        */
         
         /*
         This is the dummy data created to populate and append the array.
         */
         groundList.grounds.append(Ground("https://www.abc.net.au/news/image/5175326-3x2-940x627.jpg","MCG","Melbourne", "100024", "1853", "Melbourne Cricket Club", ""))
-        groundList.grounds.append(Ground("https://assets.atdw-online.com.au/images/58eb0e41d72e0aa26d1b765a8447629f.jpeg?rect=127%2c0%2c2053%2c1540&w=1200","Gabba","Brisbane", "42000", "1895", "Stadiums QLD", ""))
+    groundList.grounds.append(Ground("https://assets.atdw-online.com.au/images/58eb0e41d72e0aa26d1b765a8447629f.jpeg?rect=127%2c0%2c2053%2c1540&w=1200","Gabba","Brisbane", "42000", "1895", "Stadiums QLD", ""))
+        
         groundList.grounds.append(Ground("https://www.austadiums.com/stadiums/photos/Sydney-Cricket-Ground.jpg","SCG","Sydney", "48601", "1848", "Sydney Cricket Ground Trust", ""))
+        
         groundList.grounds.append(Ground("https://www.austadiums.com/stadiums/photos/optus-stadium-3.jpg","Optus Stadium","Perth", "60000", "2017", "Vanues Live", ""))
         
          

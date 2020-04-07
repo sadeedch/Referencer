@@ -27,7 +27,12 @@ struct DetailView: View {
             }.frame(width: 350, height: nil)
             
             //shwoing the image of each ground
-            ground.image
+            (ground.image).resizable().frame(width: 360, height: 300)
+                   
+            
+            
+            
+           
         
             // Vertical Stack to show the Ground name and location.
             VStack() {
